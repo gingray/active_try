@@ -1,5 +1,8 @@
 require "active_try/version"
+require 'active_record'
 
 module ActiveTry
-  # Your code goes here...
+  def self.included klass
+    binding.pry
+  end
 end

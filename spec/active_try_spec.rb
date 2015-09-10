@@ -1,11 +1,10 @@
-require 'spec_helper'
-
 describe ActiveTry do
-  it 'has a version number' do
-    expect(ActiveTry::VERSION).not_to be nil
-  end
+  let!(:account) { create :account }
+  let!(:campaign) { create :campaign, account: account }
+  let!(:group) { create :group, campaign: campaign }
+  let!(:ad) { create :ad, group: group }
 
-  it 'does something useful' do
-    expect(true).to eq(true)
+  it do
+    Account.include ActiveTry
   end
 end
