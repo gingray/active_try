@@ -5,6 +5,6 @@ describe ActiveTry do
   let!(:ad) { create :ad, group: group }
 
   it do
-    Account.include ActiveTry
+    ActiveTry.show_arr
   end
 end
